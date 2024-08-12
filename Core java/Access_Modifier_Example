@@ -1,0 +1,40 @@
+
+class Access_Modifier_example {
+    //Variabes
+   public String name = "Naga Sai";
+   String city = "Guntur";
+   protected String country = "India";
+   private String state = "Andhra Pradesh";
+
+   //Methods
+   public void display() {
+       System.out.println("Name: "+name);
+       System.out.println("City: "+city);
+       System.out.println("Country: "+country);
+       System.out.println("State: "+state);
+   }
+   void defaultModifier() { 
+       System.out.println("I am default");
+    }
+   protected void protectedModifier() {
+       System.out.println("I am protected");
+   }
+   private void privateModifier() {
+       System.out.println("I am private");
+   }  
+
+}
+public class Access_Modifier_Example {
+public static void main(String[] args) {
+    Access_Modifier_example obj = new Access_Modifier_example();
+    System.out.println(obj.name);
+    System.out.println(obj.city);
+    System.out.println(obj.country);
+    //System.out.println(obj.state); - ERROR
+    obj.display();
+    obj.defaultModifier();
+    obj.protectedModifier();
+    //obj.privateModifier();  - ERROR
+}
+    
+}
